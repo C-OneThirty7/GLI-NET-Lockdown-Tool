@@ -1,0 +1,9 @@
+#!/bin/sh /etc/rc.common
+
+START=99
+STOP=10
+
+start() {
+  [ -x /usr/sbin/glinet-lockdown.sh ] || return 0
+  /usr/sbin/glinet-lockdown.sh --guard >/dev/null 2>&1
+}

@@ -1,0 +1,24 @@
+{
+  "admin/system/glinet_lockdown": {
+    "title": "GL.iNet Lockdown",
+    "order": 95,
+    "action": {
+      "type": "view",
+      "path": "glinet_lockdown/overview"
+    },
+    "depends": {
+      "acl": [ "luci-app-glinet-lockdown-axt1800" ]
+    }
+  },
+  "admin/services/glinet_lockdown": {
+    "title": "GL.iNet Lockdown",
+    "order": 95,
+    "action": {
+      "type": "view",
+      "path": "glinet_lockdown/overview"
+    },
+    "depends": {
+      "acl": [ "luci-app-glinet-lockdown-axt1800" ]
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "luci-app-glinet-lockdown-axt1800": {
+    "description": "Grant access to GL.iNet Lockdown status and actions",
+    "write": {
+      "ubus": {
+        "file": [ "*" ]
+      },
+      "file": {
+        "/usr/sbin/glinet-lockdown.sh": [ "exec" ],
+        "/etc/init.d/glinet-lockdown-guard": [ "exec" ],
+        "/tmp/glinet-lockdown-gui.log": [ "read", "write" ],
+        "/etc/glinet-lockdown/boot-guard.summary": [ "read" ],
+        "/etc/glinet-lockdown/boot-guard.log": [ "read" ],
+        "/etc/glinet-lockdown/optional-bundles": [ "read" ],
+        "/etc/glinet-lockdown/core-applied": [ "read" ],
+        "/etc/glinet-lockdown/latest-backup": [ "read" ],
+        "/etc/glinet-lockdown/dns-enforcement-enabled": [ "read" ],
+        "/etc/glinet-lockdown/cloud-ip-block-enabled": [ "read" ],
+        "/etc/glinet-lockdown/cloud-ip-blocklist": [ "read" ],
+        "/etc/glinet-lockdown/ssh-temp-until": [ "read" ],
+        "/etc/glinet-lockdown/ssh-temp-expires": [ "read" ],
+        "/etc/glinet-lockdown/fan-mode": [ "read" ],
+        "/etc/glinet-lockdown/fan-pwm": [ "read" ],
+        "/etc/hosts": [ "read" ],
+        "/usr/lib/opkg/status": [ "read" ]
+      }
+    }
+  }
+}
